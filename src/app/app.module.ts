@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {dropdownCarComponent}  from './dropdown/dropdown.car';
+import {carModelComponent}  from './model_dropdown/car.model';
+import {sharedDataService}  from './shared_data/shared_data.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, dropdownCarComponent, carModelComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+  sharedDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

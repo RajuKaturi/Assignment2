@@ -1,0 +1,12 @@
+<select [(ngModel)]="selection" *ngIf="dropDownStatus == true" 
+(change)="showSelectedModel()">
+<option selected>Model</option>
+    <option *ngFor="let opt of selectedCarModels" [value]='opt.model'>
+    {{opt.name}}</option>        
+</select>
+
+<br>
+<br>
+<br>
+
+<img src='{{finalResult}}'>

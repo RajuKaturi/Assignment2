@@ -1,0 +1,10 @@
+
+
+<select [(ngModel)]="selection" (change)="getSelectedCar()">
+	<option selected>Please select a Car</option>
+    <option *ngFor="let opt of carsData"
+    [value]='opt.make'>{{opt.name}}</option>
+             
+</select>
+
+
